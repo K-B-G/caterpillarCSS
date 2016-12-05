@@ -31,6 +31,16 @@ body {
     background-color: #ffffff;
     /*vertical-align:inherit;*/
 }
+.demo_wrapper_1 {
+    font-family: serif;
+    color: #1D1CAA;
+}
+.demo_wrapper_1 h1 {
+    font-family: monospace;
+    color: #6207B9;
+    background-color: #FFF45F;
+    font-size: 6em;
+}
 main {
     font-family: inherit;
 }
@@ -104,9 +114,19 @@ main {
         font-size: 10.3px;
     }
 }
+@media all and (min-width: 1889px) and (orientation: landscape) {
+    #wrapper {
+        font-size: 10.8px;
+    }
+}
 @media all and (min-width: 2000px) and (orientation: landscape) {
     #wrapper {
         font-size: 7px;
+    }
+}
+@media all and (min-width: 2560px) and (orientation: landscape) {
+    #wrapper {
+        font-size: 11px;
     }
 }
 @media all and (orientation: landscape) {
@@ -116,6 +136,9 @@ main {
 	but if this is on it fixes the zoom out on form input selection.
 	Front end is annoying.*/
     /* Row Settings */
+    /*This class sets the "page-size" or "bounds" for the blocks
+		to be put into. If a row of blocks would exceed the size
+		set by the row, the block simply breaks and sits below centered.*/
     
     .row {
         box-sizing: border-box;
@@ -126,6 +149,10 @@ main {
         margin-left: auto;
         margin-bottom: 5em;
     }
+    /*This class makes an element fit the entire width
+		of the screen. It esstionally represents a
+		"page-bleed"*/
+    
     .row_full {
         box-sizing: border-box;
         display: block;
@@ -146,7 +173,7 @@ main {
     
     .block_center {
         display: block;
-        max-width: 70em;
+        width: 70em;
         margin-left: auto;
         margin-right: auto;
         box-sizing: inherit;
@@ -170,7 +197,7 @@ main {
     .block_2 {
         display: inline-block;
         vertical-align: top;
-        max-width: 64em;
+        width: 64em;
         /* width: 64em; */
         
         margin-right: 2em;
@@ -181,49 +208,48 @@ main {
     .block_2_full {
         display: inline-block;
         vertical-align: top;
-        max-width: 68.1em;
+        width: 68.1em;
         /* width: 64em; */
         /*margin-bottom: 1.6em;*/
         
         box-sizing: inherit;
     }
     .block_3 {
-        box-sizing: border-box;
+        box-sizing: inherit;
         display: inline-block;
         vertical-align: top;
-        max-width: 41.22em;
+        width: 41.22em;
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
     }
     .block_4 {
+        box-sizing: inherit;
         display: inline-block;
         vertical-align: top;
-        max-width: 29.8em;
+        width: 29.8em;
         /*max-width: 28.4em; */
         
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
-        box-sizing: inherit;
     }
     .block_5 {
+        box-sizing: inherit;
         display: inline-block;
         vertical-align: top;
-        max-width: 22.8em;
+        width: 22.8em;
         /* width: 23em; */
         
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
         /*padding-right: 5em; */
-        
-        box-sizing: inherit;
     }
     .block_6 {
         display: inline-block;
         vertical-align: top;
-        max-width: 18.3em;
+        width: 18.3em;
         /* width: 18.4em; */
         
         margin-right: 2em;
@@ -234,7 +260,7 @@ main {
     div.block_7 {
         display: inline-block;
         vertical-align: top;
-        max-width: 15em;
+        width: 15em;
         /*max-width: 14.3em;*/
         
         margin-right: 2em;
@@ -245,7 +271,7 @@ main {
     .block_8 {
         display: inline-block;
         vertical-align: top;
-        max-width: 12.6em;
+        width: 12.6em;
         /*max-width: 12em;*/
         
         margin-right: 2em;
@@ -256,7 +282,7 @@ main {
     .block_9 {
         display: inline-block;
         vertical-align: top;
-        max-width: 10.7em;
+        width: 10.7em;
         /*max-width: 10.2em;*/
         
         margin-right: 2em;
@@ -267,7 +293,7 @@ main {
     .block_10 {
         display: inline-block;
         vertical-align: top;
-        max-width: 9.2em;
+        width: 9.2em;
         /*max-width: 8.7em;*/
         
         margin-right: 2em;
@@ -278,7 +304,7 @@ main {
     .block_11 {
         display: inline-block;
         vertical-align: top;
-        max-width: 8em;
+        width: 8em;
         /*max-width: 7.5em;*/
         
         margin-right: 2em;
@@ -289,7 +315,7 @@ main {
     .block_12 {
         display: inline-block;
         vertical-align: top;
-        max-width: 7em;
+        width: 7em;
         /*max-width: 6.5em;*/
         
         margin-right: 2em;
@@ -300,14 +326,16 @@ main {
     .block_33 {
         box-sizing: inherit;
         display: inline-block;
-        max-width: 42.5em;
+        vertical-align: top;
+        width: 42.5em;
         margin-left: 2em;
         margin-right: 2em;
     }
     .block_66 {
         box-sizing: inherit;
         display: inline-block;
-        max-width: 85.4em;
+        vertical-align: top;
+        width: 85.4em;
         margin-left: 2em;
         margin-right: 2em;
     }
@@ -330,6 +358,25 @@ main {
     }
     #logo img {
         z-index: 2;
+    }
+    .padding_left_big_l {
+        padding-left: 5em;
+    }
+    .block_900 {
+        box-sizing: inherit;
+        display: inline-block;
+        width: 90em;
+        height: inherit;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    .block_233 {
+        box-sizing: inherit;
+        width: 16.9em;
+        display: inline-block;
+        height: inherit;
+        margin-left: 2em;
+        margin-right: 2em;
     }
 }
 /***** Tables, Phones, or Computers in portrait orientation *****/
@@ -496,12 +543,12 @@ img {
 
 h1 {
     display: inline-block;
+    margin-bottom: 1em;
+    margin-left: 0em;
     text-align: left;
     font-size: 4.7em;
     font-family: inherit;
     font-weight: 700;
-    margin-bottom: 1em;
-    margin-left: 0em;
 }
 h2 {
     text-align: left;
@@ -518,7 +565,6 @@ h3 {
     font-weight: 700;
     margin-bottom: 1em;
     position: relative;
-
     margin-left: 0em;
 }
 h4 {
@@ -576,6 +622,14 @@ p a {
     /* Due to the nature of inline-blocks and tags, 
 								this stops them from being huge.*/
     /*color: blue;*/
+}
+h2 a {
+    font-size: inherit;
+    /* Due to the nature of inline-blocks and tags, 
+								this stops them from being huge.*/
+    
+    color: inherit;
+    text-decoration: none;
 }
 li a {
     font-size: inherit;
@@ -840,6 +894,16 @@ col {
     align: left;
     width: inherit;
 }
+pre {
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    font-size: 2em;
+    text-align: left;
+    line-height: 1.5em;
+    white-space: normal;
+}
+pre span {
+    display: block;
+}
 /*** STYLE Settings ***/
 
 .bottom_z {
@@ -894,11 +958,29 @@ img.full_width {
 }
 /***** BACKGROUND STYLES ******/
 
+.color_white {
+    background-color: #ffffff;
+}
+.color_light_gray {
+    background-color: #E0E0E0;
+}
+.color_gray {
+    background-color: #9E9E9E;
+}
+.color_dark_gray {
+    background-color: #333333;
+}
 .color_black {
     background-color: #000000;
 }
+.color_seafoam {
+    background-color: #8BF4BB;
+}
 /***** SPACE FIXES *****/
 
+.margin_right_auto {
+    margin-right: auto;
+}
 .margin_cacoon {
     margin-bottom: 8.3em;
 }
@@ -935,6 +1017,9 @@ img.full_width {
 .margin_bottom_small {
     margin-bottom: 1em;
 }
+.padding_none {
+    padding: 0em;
+}
 .padding {
     padding: 2em;
 }
@@ -943,6 +1028,12 @@ img.full_width {
 }
 .padding_none {
     padding: 0em;
+}
+.padding_left {
+    padding-left: 2em;
+}
+.padding_left_big {
+    padding-left: 5em;
 }
 .padding_top {
     padding-top: 2em;
@@ -959,6 +1050,9 @@ img.full_width {
     position: absolute;
     z-index: 7;
     top: 2em;
+}
+.padding_right {
+    padding-right: 2em;
 }
 /***** TEXT STYLES *****/
 
@@ -1017,6 +1111,9 @@ span.big_font {
 .border_double {
     border-style: double;
 }
+.border_dashed {
+    border-style: dashed;
+}
 .border_thick {
     border-width: 3em;
 }
@@ -1032,25 +1129,19 @@ span.big_font {
 .border_left_thick {
     border-left-width: 2em;
 }
+.border_right_thick {
+    border-right-width: 2em;
+}
 .border_bottom_thin {
     border-bottom-width: 0.5em;
 }
-/***** COLORS *****/
+/***** FONT COLORS *****/
 
 .font_white {
     color: #ffffff;
 }
-.color_1 {
-    background-color: #333333;
-}
-.color_gray {
-    background-color: #9E9E9E;
-}
-.color_lightg {
-    background-color: #a4c2dc;
-}
-.color_black {
-    background-color: #000000;
+.font_dark_red {
+    color: #660000;
 }
 /***** FIXES*****/
 /************** DROP DOWN **********/
@@ -1234,8 +1325,8 @@ footer a:active {
     margin-right: auto;
 }
 .link_button:visited,
-.link_button_alt:visited{
-	color: inherit;
+.link_button_alt:visited {
+    color: inherit;
 }
 .link_button:hover {
     color: #000000;
@@ -1255,6 +1346,16 @@ footer a:active {
     margin-bottom: 1em;
     border-color: #000000;
 }
-
-	
 /**** OTHER COMPONETS *****/
+
+.demo_paragraph_padding p {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.demo {
+    padding-left: 5em;
+    padding-top: 2em;
+    margin-top: 2em;
+    background-color: #8BF4BB;
+    color: #660000;
+}
