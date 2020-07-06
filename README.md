@@ -1,4 +1,4 @@
-# catapillar-csslayout-system
+# caterpillarCSS
 Simple ungrided css layout system for prototyping and final design; IE8 compatible. 
 The main philosphy of this system is the following:
   1. Follow DRY (Don't Repeate Yourself) and KISS (Keep It Simple Stupid) methods
