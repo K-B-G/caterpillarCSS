@@ -22,11 +22,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    font-family: monospace, monospace;
+    font-family:"Courier New", Courier, monospace, monospace;
+    text-align: center;
+    /*Look into if setting monospace default font for linux like FreeMono and Nimbus Mono L*/
     color: #000000;
     /*sets global font color*/
-    
-    text-align: center;
     background-color: #ffffff;
     /*vertical-align:inherit;*/
 }
@@ -321,7 +321,7 @@ main {
     .block_6 {
         display: inline-block;
         vertical-align: top;
-        width: 18.3em;
+        width: 18.2em;
         /* width: 18.4em; */
         
         margin-right: 2em;
@@ -332,7 +332,7 @@ main {
     .block_7 {
         display: inline-block;
         vertical-align: top;
-        width: 15em;      
+        width: 14.9em;      
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
@@ -368,7 +368,7 @@ main {
     .block_11 {
         display: inline-block;
         vertical-align: top;
-        width: 7.9em;
+        width: 7.8em;
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
