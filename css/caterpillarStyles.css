@@ -15,7 +15,7 @@ body {
 }
 /* LAYOUT Settings */
 /* This is were most of the font stack should sit.
-	Then it gets henherited in the document.*/
+	Then it gets inherited in the document.*/
 
 #wrapper {
     width: 100%;
@@ -23,7 +23,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    font-family: serif;
+    font-family: monospace, monospace;
     color: #000000;
     /*sets global font color*/
     
