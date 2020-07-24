@@ -9,7 +9,6 @@ html {
 body {
     background-color: blue;
     /* strictly for testing*/
-    
     width: 100%;
     margin-top: 0em;
 }
@@ -108,6 +107,7 @@ main {
     h5,
     h6,
     p {
+        /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
         padding-left: 1em;
         padding-right: 1em;
     }
@@ -278,8 +278,6 @@ main {
         display: inline-block;
         vertical-align: top;
         width: 64em;
-        /* width: 64em; */
-        
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
@@ -291,14 +289,13 @@ main {
         width: 68.1em;
         /* width: 64em; */
         /*margin-bottom: 1.6em;*/
-        
         box-sizing: inherit;
     }
     .block_3 {
         box-sizing: inherit;
         display: inline-block;
         vertical-align: top;
-        width: 41.22em;
+        width: 41.1em;
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
@@ -307,9 +304,7 @@ main {
         box-sizing: inherit;
         display: inline-block;
         vertical-align: top;
-        width: 29.8em;
-        /*max-width: 28.4em; */
-        
+        width: 29.7em;
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
@@ -318,13 +313,10 @@ main {
         box-sizing: inherit;
         display: inline-block;
         vertical-align: top;
-        width: 22.8em;
-        /* width: 23em; */
-        
+        width: 22.7em;    
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
-        /*padding-right: 5em; */
     }
     .block_6 {
         display: inline-block;
@@ -337,12 +329,10 @@ main {
         margin-left: 2em;
         box-sizing: inherit;
     }
-    div.block_7 {
+    .block_7 {
         display: inline-block;
         vertical-align: top;
-        width: 15em;
-        /*max-width: 14.3em;*/
-        
+        width: 15em;      
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
@@ -351,9 +341,7 @@ main {
     .block_8 {
         display: inline-block;
         vertical-align: top;
-        width: 12.6em;
-        /*max-width: 12em;*/
-        
+        width: 12.5em;      
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
@@ -362,9 +350,7 @@ main {
     .block_9 {
         display: inline-block;
         vertical-align: top;
-        width: 10.7em;
-        /*max-width: 10.2em;*/
-        
+        width: 10.6em;      
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
@@ -373,9 +359,7 @@ main {
     .block_10 {
         display: inline-block;
         vertical-align: top;
-        width: 9.2em;
-        /*max-width: 8.7em;*/
-        
+        width: 9.1em;
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
@@ -384,9 +368,7 @@ main {
     .block_11 {
         display: inline-block;
         vertical-align: top;
-        width: 8em;
-        /*max-width: 7.5em;*/
-        
+        width: 7.9em;
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
@@ -395,9 +377,7 @@ main {
     .block_12 {
         display: inline-block;
         vertical-align: top;
-        width: 7em;
-        /*max-width: 6.5em;*/
-        
+        width: 6.8em;
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
@@ -555,20 +535,20 @@ h1 {
     margin-left: 0em;
     text-align: left;
     font-size: 4.7em;
-    font-family: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
 }
 h2 {
     text-align: left;
     font-size: 3.7em;
-    font-family: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
     margin-bottom: 1em;
     margin-left: 0em;
 }
 h3 {
     text-align: left;
-    font-family: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 3.2em;
     font-weight: 700;
     margin-bottom: 1em;
@@ -577,7 +557,7 @@ h3 {
 }
 h4 {
     text-align: left;
-    font-family: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.8em;
     font-weight: 700;
     margin-bottom: 1em;
@@ -585,7 +565,7 @@ h4 {
 }
 h5 {
     text-align: left;
-    font-family: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.5em;
     font-weight: 700;
     margin-bottom: 1em;
@@ -593,7 +573,7 @@ h5 {
 }
 h6 {
     text-align: left;
-    font-family: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.2em;
     font-weight: 700;
     margin-bottom: 1em;
@@ -601,8 +581,8 @@ h6 {
 }
 p {
     display: inline-block;
-    font-family: inherit;
     font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
     line-height: 1.8em;
     margin-bottom: 1em;
@@ -621,23 +601,27 @@ p {
 }
 a {
     /*display: inline-block;*/
-    
     font-size: 1.6em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
     /*color: blue;*/
 }
 p a {
     font-size: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* Due to the nature of inline-blocks and tags, 
 								this stops them from being huge.*/
     /*color: blue;*/
 }
 h2 a {
     font-size: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* Due to the nature of inline-blocks and tags, 
 								this stops them from being huge.*/
     
-    color: inherit;
     text-decoration: none;
+    color: inherit;
+    
 }
 h2 a:hover {
     background-color: #ffffff;
@@ -649,40 +633,49 @@ h2 a:active {
 }
 li a {
     font-size: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 /*** LIST Settings ***/
 
 ul {
     margin-left: 1.6em;
     margin-bottom: 1em;
-    text-align: left;
+    list-style-position: inside;
     font-size: 2em;
     line-height: 1.6em;
-    list-style-position: inside;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left; 
+    
 }
 li {
     margin-bottom: 0.5em;
-    font-size: inherit;
     list-style-type: square;
+    font-size: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 ol {
     margin-left: 1.6em;
     margin-bottom: 1em;
-    text-align: left;
+    list-style-position: inside;
     font-size: 2em;
     line-height: 1.6em;
-    list-style-position: inside;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    
 }
 ol li {
     margin-bottom: 0.5em;
     list-style-type: decimal;
+
 }
 dl {
     margin-left: 5%;
     margin-bottom: inherit;
-    text-align: left;
     font-size: 2em;
     line-height: 1.6em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;  
+    
 }
 dt {
     margin-bottom: inherit;
@@ -722,8 +715,8 @@ form {
     padding-top: 2em;
     /*padding-right: 5%;
 	padding-left: 5%; */
-    
     padding-bottom: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 fieldset {
     width: 100%;
@@ -771,12 +764,12 @@ form dd {
     width: 100%;
     box-sizing: border-box;
     display: block;
-    padding-left: 0em;
-    padding-right: 0em;
     margin-left: 0em;
     margin-top: 0em;
     margin-right: 0em;
     margin-bottom: 2em;
+    padding-left: 0em;
+    padding-right: 0em;
 }
 input {
     vertical-align: middle;
@@ -804,7 +797,7 @@ input span {
 [type="button"],
 [type="reset"],
 [type="submit"] {
-    font-size: inherit;
+    
     height: inherit;
     width: 70%;
     background-color: #ffffff;
@@ -816,8 +809,11 @@ input span {
     border-bottom-width: 0.3em;
     border-radius: 0.66em;
     border-collapse: collapse;
-    color: #000000;
     padding: 1em;
+    font-size: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    
 }
 [type="button"]:hover,
 [type="reset"]:hover,
