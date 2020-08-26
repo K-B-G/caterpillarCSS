@@ -902,29 +902,44 @@ option {
 /*********************/
 
 table {
-    display: inline-block;
+    display: table;
     min-width: 24em;
-    font-family: inherit;
-    font-size: 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-left: 0em;
-    margin-top: 1em;
-    
+    margin-top: 0em;
 }
 caption {
     text-align: center;
     margin-bottom: 1.3em;
-    font-size: inherit;
+    font-size: 2.5em;
     font-weight: 700;
     /*bold*/
 }
+thead{
+    font-size:2em;
+}
+tbody{
+    font-size: 2em;
+}
+tfoot{
+    font-size: 2em;
+}
 th {
-    font-size: inherit;
+    padding-left: .5em;
+    padding-top: .5em;
+    padding-right: .5em;
+    padding-bottom: .5em;
 }
 tr,
 td {
-    padding-left: 1em;
-    padding-top: 1em;
-    padding-right: 1em;
+    padding-left: .5em;
+    padding-top: .5em;
+    padding-right: .5em;
+    padding-bottom: .5em;
+    border-collapse: separate;
+    border-color: #000000;
+    border-width: .1em;
+    border-style: solid;
 }
 col {
     align: left;
@@ -941,6 +956,7 @@ pre span {
     display: block;
 }
 
+
 /* will be putting table spefic layout adjustments here*/
 .table_layout_auto {
     table-layout: auto;
@@ -954,8 +970,9 @@ pre span {
 
 .table_layout_fixed {
     table-layout: fixed;
-    width: 100%;
+    width: inherit;
 }
+.
 
 
 /***********************/
@@ -1134,6 +1151,9 @@ img.full_width {
 .font_gray {
     color: #383838;
 }
+.font_white{
+    color:#ffffff;
+}
 span.big_font {
     font-size: 3em;
     word-wrap: break-word;
@@ -1177,6 +1197,7 @@ span.big_font {
 }
 .overflow_x_auto{
     overflow-x: auto;
+    overflow-y: hidden;
 }
 
 /*************************/
