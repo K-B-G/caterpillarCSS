@@ -93,7 +93,7 @@ main {
     
     .block_2column {
         box-sizing: inherit;
-        display: table-cell; /*Why did I make it a tabel cell?*/
+        display: table-cell; /*Why did I make it a tabel cell? Answer: cause it puts psudeo table elemnts in place that make it "just work" also stops the issue with it not working as an inline block.*/
         width: 50%;
         height: inherit;
         margin-left: 0em;
@@ -942,7 +942,6 @@ td {
     border-style: solid;
 }
 col {
-    align: left;
     width: inherit;
 }
 pre {
@@ -960,7 +959,7 @@ pre span {
 /* will be putting table spefic layout adjustments here*/
 .table_layout_auto {
     table-layout: auto;
-    width: 30em;
+    width: inherit;
 }
 
 .table_layout_auto_100 {
@@ -971,9 +970,18 @@ pre span {
 .table_layout_fixed {
     table-layout: fixed;
     width: inherit;
+    white-space: nowrap;
 }
-.
+.table_layout_fixed_100 {
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
+}
 
+.table_layout_fixed td, .table_layout_fixed th, .table_layout_fixed_100 td, .table_layout_fixed_100 th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 /***********************/
 /*** STYLE Settings ***/
@@ -1320,13 +1328,6 @@ span.big_font {
 }
 /********/
 
-.nav_color_fix {
-    height: inherit;
-    background-color: #000000;
-}
-#logo .hover_fix:hover {
-    background-color: transparent;
-}
 footer {
     display: inline-block;
     margin-top: 1em;
