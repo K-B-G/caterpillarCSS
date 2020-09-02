@@ -880,7 +880,6 @@ optgroup {
 }
 option {
     /*font-size: inherit;*/
-    
     font-weight: 400;
 }
 [type="file"] {
@@ -901,45 +900,71 @@ option {
 /*** TABLE Settings ***/
 /*********************/
 
+/* Quick Note: after debugging it should be noted that the font size set in the table selector controls 
+                all of the em sizing for all the following table elements. So if you need to adjust the 
+                sizing for any thing, you need to use the table calculated font size. For example the
+                caption font size is 1.5em cause its 1.5em of the calculated table selector font size.
+                The tbody, thead, and tfooter fontsize are set to inherit so the tables fontsize is carried
+                over to the th and td selectors. The way before by setting the font size on tbody, thead, and
+                tfooter lead to inconsistances between the table border size and the cell border size.
+                I'd rather have all the ems work against one constant then have two constants.*/
+
+.table_overflow { 
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
 table {
     display: table;
-    min-width: 24em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
     margin-left: 0em;
     margin-top: 0em;
+    border-collapse: separate;
+    border-color: #000000;
+    border-width: .1em;
+    border-style: solid;
+    border-spacing: .5em;
 }
 caption {
     text-align: center;
-    margin-bottom: 1.3em;
-    font-size: 2.5em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
     font-weight: 700;
     /*bold*/
 }
 thead{
-    font-size:2em;
+    font-size:inherit;
 }
 tbody{
-    font-size: 2em;
+    font-size: inherit
 }
 tfoot{
-    font-size: 2em;
+    font-size: inherit;
 }
 th {
     padding-left: .5em;
     padding-top: .5em;
     padding-right: .5em;
     padding-bottom: .5em;
+    border-color: #000000;
+    border-width: .1em;
+    border-style: solid;
+    border-spacing: .1em;
 }
+
 tr,
 td {
     padding-left: .5em;
     padding-top: .5em;
     padding-right: .5em;
     padding-bottom: .5em;
-    border-collapse: separate;
+}
+td {
     border-color: #000000;
     border-width: .1em;
     border-style: solid;
+    border-spacing: .1em;
 }
 col {
     width: inherit;
@@ -954,7 +979,6 @@ pre {
 pre span {
     display: block;
 }
-
 
 /* will be putting table spefic layout adjustments here*/
 .table_layout_auto {
@@ -1202,10 +1226,6 @@ span.big_font {
 }
 .font_uppercase {
     text-transform: uppercase;
-}
-.overflow_x_auto{
-    overflow-x: auto;
-    overflow-y: hidden;
 }
 
 /*************************/
