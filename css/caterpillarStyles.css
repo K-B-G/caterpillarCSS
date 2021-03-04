@@ -23,7 +23,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    font-family:"Courier New", Courier, monospace, monospace;
+    font-family: "Courier New", Courier, monospace, monospace;
     text-align: center;
     /*Look into if setting monospace default font for linux like FreeMono and Nimbus Mono L*/
     color: #000000;
@@ -285,7 +285,7 @@ main {
     .block_2 {
         display: inline-block;
         vertical-align: top;
-        width: 64em;
+        width: 63.9em;
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
@@ -312,7 +312,7 @@ main {
         box-sizing: inherit;
         display: inline-block;
         vertical-align: top;
-        width: 29.7em;
+        width: 29.6em;
         margin-right: 2em;
         margin-bottom: 1.6em;
         margin-left: 2em;
