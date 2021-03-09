@@ -8,7 +8,7 @@ html {
 		compared to content-box.*/
 }
 body {
-    background-color: blue;
+    background-color: #ffffff;
     /* strictly for testing*/
     width: 100%;
     margin-top: 0em;
@@ -28,8 +28,9 @@ body {
     /*Look into if setting monospace default font for linux like FreeMono and Nimbus Mono L*/
     color: #000000;
     /*sets global font color*/
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/=
     /*vertical-align:inherit;*/
+    z-index: 0;
 }
 .demo_wrapper_1 {
     font-family: serif;
@@ -41,9 +42,10 @@ body {
     background-color: #FFF45F;
     font-size: 6em/1em;
 }
+/*
 main {
     font-family: inherit;
-}
+}*/
 /****************************************************************************************
 	This is what controls the "magnification" of everything.
 	NOTE: when adjustsing em sizing, use the decimal system; i.e. times the number by 10. 
@@ -109,7 +111,6 @@ main {
     h5,
     h6,
     p {
-        /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
         padding-left: 1em;
         padding-right: 1em;
     }
@@ -526,9 +527,55 @@ nav {
 }
 
 /*********************/
+/**Z-INDEX Settings**/
+/*******************/
+/****Note: default position is absolute****/
+.z-index_-4{
+    position: absolute;
+    z-index: -4;
+}
+.z-index_-3{
+    position: absolute;
+    z-index: -3;
+}
+.z-index_-2{
+    position: absolute;
+    z-index: -2;
+}
+.z-index_-1{
+    position: absolute;
+    z-index: -1;
+}
+.z-index_0{
+    position: absolute;
+    z-index: 0;
+}
+.z-index_1{
+    position: absolute;
+    z-index: 1;
+}
+.z-index_2{
+    position: absolute;
+    z-index: 2;
+}
+.z-index_3{
+    position: absolute;
+    z-index: 3;
+}
+.z-index_4{
+    position: absolute;
+    z-index: 4;
+}
+.position_relative{
+    position: relative;
+}
+.left_5em{
+    left: 5em;
+}
+
+/*********************/
 /***IMAGE Settings***/
 /*******************/
-
 img {
     display: inline-block;
     box-sizing: border-box;
@@ -1086,6 +1133,9 @@ img.full_width {
 .color_seafoam {
     background-color: #8BF4BB;
 }
+.color_red{
+    background-color: red;
+}
 
 /************************/
 /***** SPACE FIXES *****/
@@ -1093,9 +1143,6 @@ img.full_width {
 
 .margin_right_auto {
     margin-right: auto;
-}
-.margin_cacoon {
-    margin-bottom: 8.3em;
 }
 .no_margin {
     margin: 0em;
@@ -1136,6 +1183,9 @@ img.full_width {
 .margin_bottom_small {
     margin-bottom: 1em;
 }
+.margin_bottom_eight{
+    margin-bottom: 8em;
+}
 .padding_none {
     padding: 0em;
 }
@@ -1144,9 +1194,6 @@ img.full_width {
 }
 .padding_small {
     padding: 1em;
-}
-.padding_none {
-    padding: 0em;
 }
 .padding_left {
     padding-left: 2em;
