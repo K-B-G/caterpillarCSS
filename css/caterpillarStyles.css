@@ -7,22 +7,26 @@ html {
 		system uses border-box for ease of use; 
 		compared to content-box.*/
 }
-body {
+/*body {
+    box-sizing: border-box;
     background-color: #ffffff;
-    /* strictly for testing*/
+    strictly for testing
     width: 100%;
     margin-top: 0em;
-}
+} 
+*/
 /* LAYOUT Settings */
 /* This is were most of the font stack should sit.
 	Then it gets inherited in the document.*/
 
-#wrapper {
+body {
+    box-sizing: border-box;
     width: 100%;
     height: inherit;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    background-color: #ffffff;
     font-family: "Courier New", Courier, monospace, monospace;
     text-align: center;
     /*Look into if setting monospace default font for linux like FreeMono and Nimbus Mono L*/
@@ -32,6 +36,7 @@ body {
     /*vertical-align:inherit;*/
     z-index: 0;
 }
+
 .demo_wrapper_1 {
     font-family: serif;
     color: #1D1CAA;
@@ -41,6 +46,7 @@ body {
     color: #6207B9;
     background-color: #FFF45F;
     font-size: 6em/1em;
+    
 }
 /*
 main {
@@ -51,7 +57,7 @@ main {
 	NOTE: when adjustsing em sizing, use the decimal system; i.e. times the number by 10. 
 *****************************************************************************************/
 @media all and (orientation: landscape) and (aspect-ratio: 4/3), all and (orientation:landscape) and (width:320px) and (height:240px), all and (orientation: portrait){
-    #wrapper {
+    body {
         font-size: 10px;
     }
     .row_full {
@@ -111,6 +117,7 @@ main {
     h5,
     h6,
     p {
+        box-sizing: border-box;
         padding-left: 1em;
         padding-right: 1em;
     }
@@ -127,93 +134,94 @@ main {
         margin-right: 0em;
     }
     input {
+        box-sizing: border-box;
         height: 2em;
         width: 100%;
     }
 }
 
 @media all and (max-width: 299px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 0.8px;
     }
 }
 @media all and (min-width: 300px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 1.4px;
     }
 }
 @media all and (min-width: 400px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 2.5px;
     }
 }
 @media all and (min-width: 480px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 3px;
     }
 }
 @media all and (min-width: 550px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 3.6px;
     }
 }
 @media all and (min-width: 600px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 4.2px;
     }
 }
 @media all and (min-width: 700px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 4.5px;
     }
 }
 @media all and (min-width: 800px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 5.2px;
     }
 }
 @media all and (min-width: 900px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 6px;
     }
 }
 @media all and (min-width: 1000px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 7.3px;
     }
 }
 @media all and (min-width: 1280px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 8px;
     }
 }
 @media all and (min-width: 1366px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 9px;
     }
 }
 @media all and (min-width: 1600px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 10.3px;
     }
 }
 @media all and (min-width: 1889px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 10.8px;
     }
 }
 @media all and (min-width: 2000px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 7px;
     }
 }
 @media all and (min-width: 2560px) and (orientation: landscape) {
-    #wrapper {
+    body {
         font-size: 11px;
     }
 }
 @media all and (orientation: landscape) {
-    /*#wrapper{ 
+    /*body{ 
 		font-size: 10px;
 	} This has to be off for the landscape scaling to work, 
 	but if this is on it fixes the zoom out on form input selection.
@@ -566,11 +574,41 @@ nav {
     position: absolute;
     z-index: 4;
 }
+
+/*********************/
+/**POSITION Settings*/
+/*******************/
+/****NOTE: Expect debugging when using position settings 
+            in regards to responsivnes. */
 .position_relative{
     position: relative;
 }
+.position_fixed{
+    position: fixed;
+}
 .left_5em{
     left: 5em;
+}
+.right_5em{
+    right: 5em;
+}
+.bottom_1em{
+    bottom: 1em;
+}
+.bottom_2em{
+    bottom: 2em;
+}
+.bottom_3em{
+    bottom: 3em;
+}
+.bottom_4em{
+    bottom: 4em;
+}
+.bottom_5em{
+    bottom: 5em;
+}
+.top_5em{
+    top: 5em;
 }
 
 /*********************/
@@ -588,7 +626,9 @@ img {
 /**********************/
 /*** TEXT Settings ***/
 /********************/
+/* NOTE: These are to be considered the global defaults.*/
 h1 {
+    box-sizing: border-box;
     display: inline-block;
     margin-bottom: 1em;
     margin-left: 0em;
@@ -598,6 +638,7 @@ h1 {
     font-weight: 700;
 }
 h2 {
+    box-sizing: border-box;
     text-align: left;
     font-size: 3.7em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -606,6 +647,7 @@ h2 {
     margin-left: 0em;
 }
 h3 {
+    box-sizing: border-box;
     text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 3.2em;
@@ -615,6 +657,7 @@ h3 {
     margin-left: 0em;
 }
 h4 {
+    box-sizing: border-box;
     text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.8em;
@@ -623,6 +666,7 @@ h4 {
     margin-left: 0em;
 }
 h5 {
+    box-sizing: border-box;
     text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.5em;
@@ -631,6 +675,7 @@ h5 {
     margin-left: 0em;
 }
 h6 {
+    box-sizing: border-box;
     text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.2em;
@@ -639,7 +684,7 @@ h6 {
     margin-left: 0em;
 }
 p {
-    display: inline-block;
+    box-sizing: border-box;
     font-size: 2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
@@ -655,10 +700,10 @@ p {
   -ms-hyphens: auto;
   -moz-hyphens: auto;
   */
-    
     hyphens: auto;
 }
 a {
+    box-sizing: border-box;
     /*display: inline-block;*/
     font-size: 1.6em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -666,6 +711,7 @@ a {
     /*color: blue;*/
 }
 p a {
+    box-sizing: border-box;
     font-size: inherit;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* Due to the nature of inline-blocks and tags, 
@@ -691,6 +737,10 @@ h2 a:active {
     color: #000000;
 }
 li a {
+    font-size: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul a {
     font-size: inherit;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -753,19 +803,23 @@ dd {
 /* If I don't use the psudeo selector :link, it won't override everything*/
 
 a {
+    box-sizing: border-box;
     color: blue;
     text-decoration: underline;
 }
 a:visited {
+    box-sizing: border-box;
     color: #BF5F00;
     text-decoration: underline;
 }
 a:hover {
+    box-sizing: border-box;
     color: #ffffff;
     background-color: blue;
     text-decoration: none;
 }
 a:active {
+    box-sizing: border-box;
     color: #ffffff;
     background-color: #BF5F00;
     text-decoration: none;
@@ -1090,7 +1144,35 @@ pre span {
     vertical-align: baseline;
     color: #fff;
 }
-
+/*** OPACITY ***/
+/*NOTE: opacity is CSS3 and doesn't workin in IE 8<. */
+/*NOTE2: opacity effects child elements. 
+            If this is undesired make your own RGBA colors with opacity settings */
+.opacity_10{
+    opacity: 0.1;
+}
+.opacity_25{
+    opacity: 0.25;
+}
+.opacity_33{
+    opacity: 0.33;
+}
+.opacity_50{
+    opacity: 0.50;
+}
+.opacity_66{
+    opacity: 0.66;
+}
+.opacity_75{
+    opacity: 0.75;
+}
+.opacity_90{
+    opacity: 0.90;
+}
+/*example of RGBA opacity*/
+.opacity_black_50{
+    background: rgba(0, 0, 0, 0.5);
+}
 /*****************************/
 /***** DISPLAY Settings *****/
 /***************************/
@@ -1447,9 +1529,9 @@ footer a:active {
 /*****************************/
 
 .link_button {
+    box-sizing: content-box;
     text-align: center;
-    vertical-align: text-bottom;
-    margin-top: auto;
+    /*vertical-align: text-top;*/
     display: inline-block;
     font-size: 3em;
     font-weight: 700;
@@ -1471,13 +1553,10 @@ footer a:active {
     margin-left: auto;
     margin-right: auto;
 }
-.link_button a {
-    color: #000000;
-    text-decoration: none;
-}
 .link_button_alt {
+    box-sizing: content-box;
     text-align: center;
-    vertical-align: text-bottom;
+    /*vertical-align: text-bottom;*/
     margin-top: auto;
     display: inline-block;
     font-size: 3em;
@@ -1502,19 +1581,23 @@ footer a:active {
 }
 .link_button:visited,
 .link_button_alt:visited {
+    box-sizing: content-box;
     color: inherit;
 }
 .link_button:hover {
+    box-sizing: content-box;
     color: #000000;
     background-color: #CFCFCF;
 }
 .link_button_alt:hover {
+    box-sizing: content-box;
     color: #ffffff;
     background-color: #999999;
     border-color: #999999;
 }
 .link_button:active,
 .link_button_alt:active {
+    box-sizing: content-box;
     color: #ffffff;
     background-color: #000000;
     border-width: 0.2em;
