@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div id="wrapper">
+    <div>
         <nav id="nav">
             <div id="logo"><img class="full_width" src="img/CSS_logo.png" alt="logo" height="100" width="300" />
             </div>
@@ -1983,31 +1983,38 @@ http://via.placeholder.com/650x125" alt="" height="125" width="200">
                     </div>
                 </div>
                 <div class="row">
-                <div class="block_2">
-                    <h4>RGBA Option</h4>
-                    <p>this is just some filler text explaing RGBA option</p>
-                </div>
-                <div class="block_2">
-                    <div class="padding_small opacity_black_50">
-                        <p>This is at 50% opacity.</p>
-                        <span class="small_font font_white">
-                            <p>*The font color has not been changed cause only the background color is effected</p>
-                        </span>
+                    <div class="block_2">
+                        <h4>RGBA Option</h4>
+                        <p>this is just some filler text explaing RGBA option</p>
                     </div>
-                </div>
-                </div>
-                <div class="row">
-                    <div class="block_66">
-                        <div class="padding_small color_black opacity_50 z-index_1">
-                            <p class="font_white">This is at z-index1</p>
+                    <div class="block_2">
+                        <div class="padding_small opacity_black_50">
+                            <p>This is at 50% opacity.</p>
+                            <span class="small_font font_white">
+                                <p>*The font color has not been changed cause only the background color is effected</p>
+                            </span>
                         </div>
                     </div>
-                    <div class="block_33">
+                </div>
+                <div class="row">
+                    <div class="block_33 float_right_l">
                         <h3>Z-Index</h3>
                         <p>this is just some place holder text to explain how z-index works.</p>
                     </div>
-                </div>
-
+                    <div class="block_66 position_relative">
+                        <div class="padding_small opacity_black_50 z-index_1 position_relative">
+                            <p class="font_white">This is at z-index 1. I'm the first block and am at 50% opacity. I
+                                have relative-position.</p>
+                        </div>
+                        <div class="block_33 padding_small opacity_black_25 z-index_3 right_5em top_5em">
+                            <p class="font_white color_black display_inline">This is at z-index 3. I'm the second block
+                                and I'm at 25% opacity. I have the default absolute position.</p>
+                        </div>
+                        <div class="padding_small opacity_black_75 z-index_2 bottom_1em position_relative">
+                            <p class="font_white">This is at z-index 2. I'm the thrid block and I'm at 75% opacity. I
+                                have relative-position.</p>
+                        </div>
+                    </div>
             </section>
             <section class="row border_black border_double border_left_thick border_right_thick border_bottom_thick">
                 <h2 class="padding_small text_center margin_bottom font_white color_black">Final Thoughts</h2>

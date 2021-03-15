@@ -36,7 +36,9 @@ body {
     /*vertical-align:inherit;*/
     z-index: 0;
 }
-
+div{
+    box-sizing: border-box;
+}
 .demo_wrapper_1 {
     font-family: serif;
     color: #1D1CAA;
@@ -121,7 +123,9 @@ main {
         padding-left: 1em;
         padding-right: 1em;
     }
-    .float_right {
+    /* This is mostly to fix alternating heaind titles and word boxes
+        used in landscape mode. */
+    .float_right_alt {
         float: none;
     }
     #second_nav {
@@ -138,6 +142,118 @@ main {
         height: 2em;
         width: 100%;
     }
+    .position_fixed_p{
+        position: fixed;
+    }
+
+    #logo {
+        display: inline-block;
+        height: inherit;
+        margin-top: 1em;
+        margin-bottom: 0em;
+        vertical-align: text-top;
+        box-sizing: border-box;
+        text-align: left;
+    }
+    #logo img {
+        z-index: 2;
+    }
+    .padding_left_big_l {
+        padding-left: 5em;
+    }
+    .block_900 {
+        box-sizing: inherit;
+        display: inline-block;
+        width: 90em;
+        height: inherit;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    .block_233 {
+        box-sizing: inherit;
+        width: 16.9em;
+        display: inline-block;
+        height: inherit;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    .font_purple_l {
+        color: #6207B9;
+    }
+    /*NOTE: Float_right_l is for when you want to alternate heading and wordboxes
+            in landscape mode. It will be turned off in portrait mode. */
+    .float_right_l {
+    float: right;
+    }
+/*** NAV Settings ***/
+
+#second_nav {
+    background-color: #a4c2dc;
+}
+#nav {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    height: inherit;
+    /*background: linear-gradient(to bottom, blue , darkblue);*/   
+    font-family: Arial, Helvetica, Helvetica neue, sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1em;
+    margin-top: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    margin-bottom: 5em;
+    background-color: #000000;
+}
+#logo {
+    height: inherit;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 0em;
+    margin-top: 1em;
+    vertical-align: text-top;
+    text-align: left;
+}
+#nav ul {
+    display: inline-block;
+    vertical-align: text-top;
+    margin-bottom: 0em;
+}
+#nav li {
+    box-sizing: border-box;
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 0em;
+    vertical-align: text-bottom;
+}
+#nav li a {
+    box-sizing: border-box;
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    font-size: 1em;
+}
+#nav a:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+#nav a:active {
+    color: #000000;
+    background-color: #D0D0D0;
+}
+#nav ul li a {
+    display: inline-block;
+    vertical-align: text-bottom;
+    overflow: hidden;
+}
+nav {
+    width: 100%;
+}
 }
 
 @media all and (max-width: 299px) and (orientation: landscape) {
@@ -450,20 +566,11 @@ main {
     .font_purple_l {
         color: #6207B9;
     }
-}
-/***** Tables, Phones, or Computers in portrait orientation *****/
-
-
-/*** Change highlight colors ***/
-
-::selection {
-    background: #686868;
-    color: #ffffff;
-}
-::-moz-selection {
-    background: #686868;
-    color: #ffffff;
-}
+    /*NOTE: Float_right_l is for when you want to alternate heading and wordboxes
+            in landscape mode. It will be turned off in portrait mode. */
+    .float_right_l {
+    float: right;
+    }
 /*** NAV Settings ***/
 
 #second_nav {
@@ -533,6 +640,21 @@ main {
 nav {
     width: 100%;
 }
+}
+/***** Tables, Phones, or Computers in portrait orientation *****/
+
+
+/*** Change highlight colors ***/
+
+::selection {
+    background: #686868;
+    color: #ffffff;
+}
+::-moz-selection {
+    background: #686868;
+    color: #ffffff;
+}
+
 
 /*********************/
 /**Z-INDEX Settings**/
@@ -610,6 +732,10 @@ nav {
 .top_5em{
     top: 5em;
 }
+.top_10em{
+    top: 10em;
+}
+
 
 /*********************/
 /***IMAGE Settings***/
@@ -1173,6 +1299,12 @@ pre span {
 .opacity_black_50{
     background: rgba(0, 0, 0, 0.5);
 }
+.opacity_black_25{
+    background: rgba(0, 0, 0, 0.25);
+}
+.opacity_black_75{
+    background: rgba(0, 0, 0, 0.75);
+}
 /*****************************/
 /***** DISPLAY Settings *****/
 /***************************/
@@ -1191,6 +1323,9 @@ img.full_width {
 }
 .display_block {
     display: block;
+}
+.display_inline{
+    display: inline;
 }
 
 /*******************************/
@@ -1625,4 +1760,8 @@ footer a:active {
 
 .margin_what_css{
 	margin-top: 0.3em;
+}
+
+.box_sizing_content{
+    box-sizing: content-box;
 }
