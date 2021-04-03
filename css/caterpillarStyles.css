@@ -32,7 +32,7 @@ body {
     /*Look into if setting monospace default font for linux like FreeMono and Nimbus Mono L*/
     color: #000000;
     /*sets global font color*/
-    /*background-color: #ffffff;*/=
+    /*background-color: #ffffff;*/
     /*vertical-align:inherit;*/
     z-index: 0;
 }
@@ -1764,4 +1764,14 @@ footer a:active {
 
 .box_sizing_content{
     box-sizing: content-box;
+}
+
+a[name]{
+    text-decoration-line: none;
+    color: inherit;
+    font-size: inherit;
+}
+a[name]:hover{
+    background-color: inherit;
+    color: inherit;
 }
