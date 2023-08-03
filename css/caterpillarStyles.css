@@ -185,6 +185,8 @@ main {
     .float_right_l {
     float: right;
     }
+}
+@media all and (orientation: portrait) {
 /*** NAV Settings ***/
 
 #second_nav {
@@ -194,8 +196,7 @@ main {
     box-sizing: border-box;
     display: inline-block;
     width: 100%;
-    height: inherit;
-    /*background: linear-gradient(to bottom, blue , darkblue);*/   
+    height: inherit;   
     font-family: Arial, Helvetica, Helvetica neue, sans-serif;
     font-weight: 700;
     text-transform: capitalize;
@@ -254,6 +255,7 @@ main {
 nav {
     width: 100%;
 }
+
 }
 
 @media all and (max-width: 299px) and (orientation: landscape) {
@@ -627,15 +629,27 @@ nav {
 #nav a:hover {
     color: #000000;
     background-color: #ffffff;
+
 }
 #nav a:active {
     color: #000000;
     background-color: #D0D0D0;
 }
 #nav ul li a {
-    display: inline-block;
     vertical-align: text-bottom;
     overflow: hidden;
+    --a-size: inherit;
+}
+
+#nav .sub_nav_list >ul{
+   width: 0em;
+   height: 0em;
+   overflow: hidden; 
+}
+#nav .sub_nav_list a:hover{
+    overflow: visible;
+    width: auto;
+    height: auto;
 }
 nav {
     width: 100%;
@@ -1547,7 +1561,7 @@ span.big_font {
 #nav .start_drop_down{
 	position: relative;
 }*/
-
+/*
 #nav .start_drop_down ul {
     display: none;
     position: relative;
@@ -1766,6 +1780,7 @@ footer a:active {
     box-sizing: content-box;
 }
 
+/*
 a[name]{
     text-decoration-line: none;
     color: inherit;
@@ -1775,3 +1790,4 @@ a[name]:hover{
     background-color: inherit;
     color: inherit;
 }
+*/
