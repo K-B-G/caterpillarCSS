@@ -644,6 +644,7 @@ nav {
 #nav .sub_nav_list >ul{
    width: 0em;
    height: 0em;
+   margin: 0;
    overflow: hidden; 
 }
 #nav .sub_nav_list a:hover{
