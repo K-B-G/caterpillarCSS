@@ -1,36 +1,44 @@
+/************************/
 /*** GLOBAL DEFUALTS ***/
-
+/**********************/
 html {
     box-sizing: border-box;
     /*this doesn't do anything, but just want to let you know the whole
 		system uses border-box for ease of use; 
 		compared to content-box.*/
+        
 }
-body {
-    background-color: blue;
-    /* strictly for testing*/
-    
+/*body {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    strictly for testing
     width: 100%;
     margin-top: 0rem;
 } 
 */
 /* LAYOUT Settings */
 /* This is were most of the font stack should sit.
-	Then it gets henherited in the document.*/
+	Then it gets inherited in the document.*/
 
-#wrapper {
+body {
+    box-sizing: border-box;
     width: 100%;
     height: inherit;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    font-family: serif;
+    background-color: #ffffff;
+    font-family: "Courier New", Courier, monospace, monospace;
+    text-align: center;
+    /*Look into if setting monospace default font for linux like FreeMono and Nimbus Mono L*/
     color: #000000;
     /*sets global font color*/
-    
-    text-align: center;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     /*vertical-align:inherit;*/
+    z-index: 0;
+}
+div{
+    box-sizing: border-box;
 }
 .demo_wrapper_1 {
     font-family: serif;
@@ -43,9 +51,10 @@ body {
     font-size: 6rem/1rem;
     
 }
+/*
 main {
     font-family: inherit;
-}
+}*/
 /****************************************************************************************
 	This is what controls the "magnification" of everything.
 	NOTE: when adjustsing em sizing, use the decimal systrem; i.e. times the number by 10. 
@@ -95,7 +104,7 @@ main {
     
     .block_2column {
         box-sizing: inherit;
-        display: table-cell;
+        display: table-cell; /*Why did I make it a tabel cell? Answer: cause it puts psudeo table elemnts in place that make it "just work" also stops the issue with it not working as an inline block.*/
         width: 50%;
         height: inherit;
         margin-left: 0rem;
@@ -115,7 +124,9 @@ main {
         padding-left: 1rem;
         padding-right: 1rem;
     }
-    .float_right {
+    /* This is mostly to fix alternating heaind titles and word boxes
+        used in landscape mode. */
+    .float_right_alt {
         float: none;
     }
     #second_nav {
@@ -329,12 +340,15 @@ nav {
     }
 }
 @media all and (orientation: landscape) {
-    /*#wrapper{ 
+    /*body{ 
 		font-size: 10px;
 	} This has to be off for the landscape scaling to work, 
 	but if this is on it fixes the zoom out on form input selection.
 	Front end is annoying.*/
-    /* Row Settings */
+    
+    /***********************/
+    /*****Row Settings*****/
+    /*********************/
     /*This class sets the "page-size" or "bounds" for the blocks
 		to be put into. If a row of blocks would exceed the size
 		set by the row, the block simply breaks and sits below centered.*/
@@ -368,7 +382,10 @@ nav {
         height: inherit;
         margin-bottom: 5rem;
     }
-    /* Block Settings */
+
+    /*********************/
+    /***Block Settings***/
+    /*******************/
     
     .block_center {
         display: block;
@@ -448,7 +465,7 @@ nav {
         margin-left: 2rem;
         box-sizing: inherit;
     }
-    div.block_7 {
+    .block_7 {
         display: inline-block;
         vertical-align: top;
         width: 14.9rem;      
@@ -552,20 +569,11 @@ nav {
     .font_purple_l {
         color: #6207B9;
     }
-}
-/***** Tables, Phones, or Computers in portrait orientation *****/
-
-
-/*** Change highlight colors ***/
-
-::selection {
-    background: #686868;
-    color: #ffffff;
-}
-::-moz-selection {
-    background: #686868;
-    color: #ffffff;
-}
+    /*NOTE: Float_right_l is for when you want to alternate heading and wordboxes
+            in landscape mode. It will be turned off in portrait mode. */
+    .float_right_l {
+    float: right;
+    }
 /*** NAV Settings ***/
 
 #second_nav {
@@ -576,8 +584,7 @@ nav {
     display: inline-block;
     width: 100%;
     height: inherit;
-    /*background: linear-gradient(to bottom, blue , darkblue);*/
-    
+    /*background: linear-gradient(to bottom, blue , darkblue);*/   
     font-family: Arial, Helvetica, Helvetica neue, sans-serif;
     font-weight: 700;
     text-transform: capitalize;
@@ -618,18 +625,18 @@ nav {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1.6rem;
 }
 #nav a:hover {
     color: #000000;
     background-color: #ffffff;
+
 }
 #nav a:active {
     color: #000000;
     background-color: #D0D0D0;
 }
 #nav ul li a {
-    display: inline-block;
     vertical-align: text-bottom;
     overflow: hidden;
     --a-size: inherit;
@@ -649,7 +656,8 @@ nav {
 nav {
     width: 100%;
 }
-/* IMAGE Settings */
+}
+/***** Tables, Phones, or Computers in portrait orientation *****/
 
 
 /*** Change highlight colors ***/
@@ -756,9 +764,13 @@ img {
     margin-right: 0rem;
     margin-bottom: 2rem;
 }
-/*** TEXT Settings ***/
 
+/**********************/
+/*** TEXT Settings ***/
+/********************/
+/* NOTE: These are to be considered the global defaults.*/
 h1 {
+    box-sizing: border-box;
     display: inline-block;
     margin-bottom: 1rem;
     margin-left: 0rem;
@@ -768,6 +780,7 @@ h1 {
     font-weight: 700;
 }
 h2 {
+    box-sizing: border-box;
     text-align: left;
     font-size: 3.7rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -776,6 +789,7 @@ h2 {
     margin-left: 0rem;
 }
 h3 {
+    box-sizing: border-box;
     text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 3.2rem;
@@ -785,6 +799,7 @@ h3 {
     margin-left: 0rem;
 }
 h4 {
+    box-sizing: border-box;
     text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.8rem;
@@ -793,6 +808,7 @@ h4 {
     margin-left: 0rem;
 }
 h5 {
+    box-sizing: border-box;
     text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.5rem;
@@ -801,6 +817,7 @@ h5 {
     margin-left: 0rem;
 }
 h6 {
+    box-sizing: border-box;
     text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.2rem;
@@ -825,30 +842,33 @@ p {
   -ms-hyphens: auto;
   -moz-hyphens: auto;
   */
-    
     hyphens: auto;
 }
 a {
+    box-sizing: border-box;
     /*display: inline-block;*/
     font-size: 1.6rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
-    font-size: 1.6em;
     /*color: blue;*/
 }
 p a {
+    box-sizing: border-box;
     font-size: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* Due to the nature of inline-blocks and tags, 
 								this stops them from being huge.*/
     /*color: blue;*/
 }
 h2 a {
     font-size: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* Due to the nature of inline-blocks and tags, 
 								this stops them from being huge.*/
     
-    color: inherit;
     text-decoration: none;
+    color: inherit;
+    
 }
 h2 a:hover {
     background-color: #ffffff;
@@ -860,15 +880,23 @@ h2 a:active {
 }
 li a {
     font-size: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+ul a {
+    font-size: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/**********************/
 /*** LIST Settings ***/
+/********************/
 
 ul {
     margin-left: 1.6rem;
     margin-bottom: 1rem;
     list-style-position: inside;
     font-size: 2rem;
-    line-height: 1.6rem;
+    line-height: 3rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left; 
     
@@ -877,14 +905,14 @@ li {
     margin-bottom: 0.5rem;
     list-style-type: square;
     font-size: inherit;
-    list-style-type: square;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 ol {
     margin-left: 1.6rem;
     margin-bottom: 1rem;
     list-style-position: inside;
     font-size: 2rem;
-    line-height: 1.6rem;
+    line-height: 3rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
     
@@ -892,12 +920,13 @@ ol {
 ol li {
     margin-bottom: 0.5rem;
     list-style-type: decimal;
+
 }
 dl {
     margin-left: 5%;
     margin-bottom: inherit;
     font-size: 2rem;
-    line-height: 1.6rem;
+    line-height: 3rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;  
     
@@ -910,28 +939,37 @@ dd {
     margin-bottom: inherit;
     margin-left: 1.5rem;
 }
+/**********************/
 /*** LINK Settings ***/
+/********************/
 /* If I don't use the psudeo selector :link, it won't override everything*/
 
 a {
+    box-sizing: border-box;
     color: blue;
     text-decoration: underline;
 }
 a:visited {
+    box-sizing: border-box;
     color: #BF5F00;
     text-decoration: underline;
 }
 a:hover {
+    box-sizing: border-box;
     color: #ffffff;
     background-color: blue;
     text-decoration: none;
 }
 a:active {
+    box-sizing: border-box;
     color: #ffffff;
     background-color: #BF5F00;
     text-decoration: none;
 }
+
+/**********************/
 /*** FORM Settings ***/
+/********************/
 
 form {
     width: 100%;
@@ -1022,7 +1060,7 @@ input span {
 [type="button"],
 [type="reset"],
 [type="submit"] {
-    font-size: inherit;
+    
     height: inherit;
     width: 70%;
     background-color: #ffffff;
@@ -1038,7 +1076,7 @@ input span {
     font-size: inherit;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #000000;
-    padding: 1em;
+    
 }
 [type="button"]:hover,
 [type="reset"]:hover,
@@ -1085,7 +1123,6 @@ optgroup {
 }
 option {
     /*font-size: inherit;*/
-    
     font-weight: 400;
 }
 [type="file"] {
@@ -1101,7 +1138,24 @@ option {
     font-size: inherit;
     width: 90%;
 }
+
+/***********************/
 /*** TABLE Settings ***/
+/*********************/
+
+/* Quick Note: after debugging it should be noted that the font size set in the table selector controls 
+                all of the em sizing for all the following table elements. So if you need to adjust the 
+                sizing for any thing, you need to use the table calculated font size. For example the
+                caption font size is 1.5em cause its 1.5em of the calculated table selector font size.
+                The tbody, thead, and tfooter fontsize are set to inherit so the tables fontsize is carried
+                over to the th and td selectors. The way before by setting the font size on tbody, thead, and
+                tfooter lead to inconsistances between the table border size and the cell border size.
+                I'd rather have all the ems work against one constant then have two constants.*/
+
+.table_overflow { 
+    overflow-x: auto;
+    overflow-y: hidden;
+}
 
 table {
     display: table;
@@ -1122,7 +1176,13 @@ caption {
     font-weight: 700;
     /*bold*/
 }
-th {
+thead{
+    font-size:inherit;
+}
+tbody{
+    font-size: inherit
+}
+tfoot{
     font-size: inherit;
 }
 th {
@@ -1150,7 +1210,6 @@ td {
     border-spacing: .1rem;
 }
 col {
-    align: left;
     width: inherit;
 }
 pre {
@@ -1163,7 +1222,37 @@ pre {
 pre span {
     display: block;
 }
+
+/* will be putting table spefic layout adjustments here*/
+.table_layout_auto {
+    table-layout: auto;
+    width: inherit;
+}
+
+.table_layout_auto_100 {
+    table-layout: auto;
+    width: 100%;
+}
+
+.table_layout_fixed {
+    table-layout: fixed;
+    width: inherit;
+    white-space: nowrap;
+}
+.table_layout_fixed_100 {
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.table_layout_fixed td, .table_layout_fixed th, .table_layout_fixed_100 td, .table_layout_fixed_100 th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/***********************/
 /*** STYLE Settings ***/
+/*********************/
 
 .bottom_z {
     position: relative;
@@ -1197,8 +1286,44 @@ pre span {
     vertical-align: baseline;
     color: #fff;
 }
+/*** OPACITY ***/
+/*NOTE: opacity is CSS3 and doesn't workin in IE 8<. */
+/*NOTE2: opacity effects child elements. 
+            If this is undesired make your own RGBA colors with opacity settings */
+.opacity_10{
+    opacity: 0.1;
+}
+.opacity_25{
+    opacity: 0.25;
+}
+.opacity_33{
+    opacity: 0.33;
+}
+.opacity_50{
+    opacity: 0.50;
+}
+.opacity_66{
+    opacity: 0.66;
+}
+.opacity_75{
+    opacity: 0.75;
+}
+.opacity_90{
+    opacity: 0.90;
+}
+/*example of RGBA opacity*/
+.opacity_black_50{
+    background: rgba(0, 0, 0, 0.5);
+}
+.opacity_black_25{
+    background: rgba(0, 0, 0, 0.25);
+}
+.opacity_black_75{
+    background: rgba(0, 0, 0, 0.75);
+}
+/*****************************/
 /***** DISPLAY Settings *****/
-
+/***************************/
 .float_right {
     float: right;
 }
@@ -1215,7 +1340,13 @@ img.full_width {
 .display_block {
     display: block;
 }
+.display_inline{
+    display: inline;
+}
+
+/*******************************/
 /***** BACKGROUND STYLES ******/
+/*****************************/
 
 .color_white {
     background-color: #ffffff;
@@ -1235,13 +1366,16 @@ img.full_width {
 .color_seafoam {
     background-color: #8BF4BB;
 }
+.color_red{
+    background-color: red;
+}
+
+/************************/
 /***** SPACE FIXES *****/
+/**********************/
 
 .margin_right_auto {
     margin-right: auto;
-}
-.margin_cacoon {
-    margin-bottom: 8.3em;
 }
 .no_margin {
     margin: 0rem;
@@ -1294,9 +1428,6 @@ img.full_width {
 .padding_small {
     padding: 1rem;
 }
-.padding_none {
-    padding: 0em;
-}
 .padding_left {
     padding-left: 2rem;
 }
@@ -1325,10 +1456,15 @@ img.full_width {
 .padding_right_big {
     padding-right: 5rem;
 }
+/************************/
 /***** TEXT STYLES *****/
+/**********************/
 
 .font_gray {
     color: #383838;
+}
+.font_white{
+    color:#ffffff;
 }
 span.big_font {
     font-size: 3rem;
@@ -1371,7 +1507,10 @@ span.big_font {
 .font_uppercase {
     text-transform: uppercase;
 }
+
+/*************************/
 /**** BORDER STYLES *****/
+/***********************/
 
 .border_black {
     border-color: #000000;
@@ -1424,7 +1563,7 @@ span.big_font {
 #nav .start_drop_down{
 	position: relative;
 }*/
-
+/*
 #nav .start_drop_down ul {
     display: none;
     position: relative;
@@ -1489,13 +1628,6 @@ span.big_font {
 }
 /********/
 
-.nav_color_fix {
-    height: inherit;
-    background-color: #000000;
-}
-#logo .hover_fix:hover {
-    background-color: transparent;
-}
 footer {
     display: inline-block;
     margin-top: 1rem;
@@ -1542,21 +1674,24 @@ footer a:active {
     color: #f5b148;
     background-color: #000000;
 }
+
+/*******************************/
 /***** BUTTON LINK STYLES *****/
+/*****************************/
 
 .link_button {
+    box-sizing: border-box;
     text-align: center;
-    vertical-align: text-bottom;
-    margin-top: auto;
+    /*vertical-align: text-top;*/
     display: inline-block;
     font-size: 3rem;
     font-weight: 700;
     text-decoration: none;
     color: #000000;
     height: 2rem;
-    padding-left: 0.7rem;
-    padding-top: 0.7rem;
-    padding-right: 0.7rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
     background-color: #fff;
     border-color: #000000;
     border-style: solid;
@@ -1569,13 +1704,10 @@ footer a:active {
     margin-left: auto;
     margin-right: auto;
 }
-.link_button a {
-    color: #000000;
-    text-decoration: none;
-}
 .link_button_alt {
+    box-sizing: content-box;
     text-align: center;
-    vertical-align: text-bottom;
+    /*vertical-align: text-bottom;*/
     margin-top: auto;
     display: inline-block;
     font-size: 3rem;
@@ -1600,19 +1732,23 @@ footer a:active {
 }
 .link_button:visited,
 .link_button_alt:visited {
+    box-sizing: content-box;
     color: inherit;
 }
 .link_button:hover {
+    box-sizing: content-box;
     color: #000000;
     background-color: #CFCFCF;
 }
 .link_button_alt:hover {
+    box-sizing: content-box;
     color: #ffffff;
     background-color: #999999;
     border-color: #999999;
 }
 .link_button:active,
 .link_button_alt:active {
+    box-sizing: content-box;
     color: #ffffff;
     background-color: #000000;
     border-width: 0.2rem;
@@ -1620,7 +1756,10 @@ footer a:active {
     margin-bottom: 1rem;
     border-color: #000000;
 }
+
+/***************************/
 /**** OTHER COMPONETS *****/
+/*************************/
 
 .demo_paragraph_padding p {
     padding-left: 1rem;
@@ -1638,3 +1777,19 @@ footer a:active {
 .margin_what_css{
 	margin-top: 0.3rem;
 }
+
+.box_sizing_content{
+    box-sizing: content-box;
+}
+
+/*
+a[name]{
+    text-decoration-line: none;
+    color: inherit;
+    font-size: inherit;
+}
+a[name]:hover{
+    background-color: inherit;
+    color: inherit;
+}
+*/
